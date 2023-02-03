@@ -379,19 +379,23 @@ header {
 /* =================================== FOOTER ===================================*/
 .footer {
   background-color: #2e2f42;
-  padding: 100px 0;
+  padding: 100px 100px;
+  max-width: 1440px;
+  margin-left: auto;
+  margin-right: auto;
 }
 .footer-container {
   padding-top: 100px;
   padding-bottom: 100px;
-  display: flex;
 }
 
 /*----------------------- footer socail ------------------------*/
 
 .social-footer {
-  display: flex;
   margin-left: 120px;
+}
+.footer-wrap {
+  margin-left: 156px;
 }
 
 .title-social-media {
@@ -403,16 +407,37 @@ header {
   padding-bottom: 16px;
   letter-spacing: 0, 2em;
 }
-.social-list {
-  display: flex;
+.socials-list {
   margin-top: 8px;
-  gap: 24px;
+  gap: 16px;
+  display: flex;
 }
-.social-link {
-  display: block;
+.socials-item {
+  background: rgba(255, 255, 255, 0.1);
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+}
+.socials-link {
+  justify-content: center;
+  align-items: center;
   border-radius: 50%;
   border: none;
-  background: rgba(255, 255, 255, 0.1);
+}
+.socials-link:hover,
+.socials-link:focus {
+  background-color: #31d0aa;
+}
+.container-footer {
+  display: flex;
+}
+.socials-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 /* ============================ PORTFOLIO===================================*/
