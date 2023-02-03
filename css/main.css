@@ -323,12 +323,6 @@ header {
   fill: currentColor;
 }
 
-.social-list:hover,
-.social-list:focus {
-  background-color: var(--focus-hover-color);
-  background: #ffffff;
-}
-
 .social-list {
   display: flex;
   gap: 24px;
@@ -345,14 +339,8 @@ header {
   max-width: 1128px;
 }
 .bisnes-partner {
-  /* display: flex; */
-  /* align-items: center;
-  justify-content: center; */
   width: 168px;
   height: 88px;
-
-  border: 1px solid #8e8f99;
-  border-radius: 4px;
 }
 .customers-item {
   display: flex;
@@ -361,19 +349,10 @@ header {
   height: 88px;
 }
 
-.bisnes-partner:hover,
-.bisnes-partner:focus {
-  border: 1px solid var(--focus-hover-color);
-  border-radius: 4px;
+.brend:hover {
+  background-color: #404bbf;
 }
 .brend {
-  width: 104px;
-  height: 56px;
-  fill: #8e8f99;
-}
-.bisnes-partner:hover .brend,
-.bisnes-partner:focus .brend {
-  fill: var(--focus-hover-color);
 }
 
 /* =================================== FOOTER ===================================*/
@@ -427,10 +406,7 @@ header {
   border-radius: 50%;
   border: none;
 }
-.socials-link:hover,
-.socials-link:focus {
-  background-color: #31d0aa;
-}
+
 .container-footer {
   display: flex;
 }
@@ -438,6 +414,11 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
+  fill: var(--subtle-text);
+}
+.socials-icon:hover {
+  background-color: #31d0aa;
+  color: #31d0aa;
 }
 
 /* ============================ PORTFOLIO===================================*/
