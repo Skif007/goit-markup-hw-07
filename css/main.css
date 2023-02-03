@@ -348,11 +348,13 @@ header {
   width: 168px;
   height: 88px;
 }
-
-.brend:hover {
-  background-color: #404bbf;
-}
 .brend {
+  fill: currentColor;
+}
+
+.bisnes-partner:hover,
+.bisnes-partner:hover {
+  color: var(--color-for-btn-hov-foc-hero);
 }
 
 /* =================================== FOOTER ===================================*/
@@ -414,11 +416,10 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
-  fill: var(--subtle-text);
 }
-.socials-icon:hover {
+.socials-item:hover {
   background-color: #31d0aa;
-  color: #31d0aa;
+  border-radius: 50%;
 }
 
 /* ============================ PORTFOLIO===================================*/
