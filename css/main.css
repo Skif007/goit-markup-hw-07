@@ -347,50 +347,44 @@ header {
 }
 
 /* ===============================customers===================== */
-.customers-list {
-  display: flex;
-  align-items: center;
+.custumers {
   padding: 0px;
   margin-top: 72px;
   gap: 24px;
-  max-width: 1128px;
 }
-
 .customers-item {
   display: flex;
-  align-items: center;
   justify-content: center;
-  gap: 24px;
+  align-items: center;
   width: 168px;
   height: 88px;
+
   border: 1px solid #8e8f99;
   border-radius: 4px;
 }
 
-.customers-link {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 168px;
-  height: 88px;
-
-  border: 1px solid #8e8f99;
-  border-radius: 4px;
+.customers-item:hover,
+.customers-item:focus {
+  border: 1px solid #404bbf;
+  background-color: white;
 }
 
 .brend:hover,
 .brend:focus {
-  border: 1px solid #404bbf;
-  background-color: white;
+  color: #4d5ae5;
+  flex-direction: column;
+}
 
-  color: #404bbf;
+.customers-list {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  gap: 24px;
 }
-.customers-link:hover,
-.customers-link:focus {
-}
+
 .brend {
-  width: 104px;
-  height: 56px;
+  fill: currentColor;
+  color: #8e8f99;
 }
 
 /* =================================== FOOTER ===================================*/
