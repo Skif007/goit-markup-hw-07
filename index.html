@@ -60,7 +60,7 @@
         Effective Solutions
         for Your Business
       </h1>
-      <button class="btn-order button" type="button">Order Service</button>
+      <button data-modal-open class="btn-order button" type="button">Order Service</button>
     </section>
 
 
@@ -306,14 +306,10 @@
           </li>
         </ul>
 
-
       </div>
-
-      <!-- -------------------------------------------Customers------------------------- -->
-
     </section>
   </main>
-
+  <!-- -------------------------------------------Customers------------------------- -->
   <section class="section">
     <div class="container">
       <h2 class="section-title">Customers
@@ -440,6 +436,17 @@
       </div>
     </div>
   </footer>
+  <!------------------ model window------------------- -->
+  <div class="backdrop is-hidden" data-modal>
+    <div class="modal">
+      <button type="button" class="modal-close-btn" data-modal-close>
+        <svg class="modal-close-btn-icon" width="8px" height="8px">
+          <use href="./swgicons/symbol-defss.svg#icon-vector"></use>
+        </svg>
+      </button>
+    </div>
+  </div>
+  <script src="./js/modal.js"></script>
 </body>
 
 </html>
