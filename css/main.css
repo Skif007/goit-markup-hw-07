@@ -8,6 +8,14 @@
   --focus-hover-color: #404bbf;
   --main-white: #ffffff;
   --background-light-color: #f4f4fd;
+
+  /* fonts */
+  --logo-font: Raleway, sans-serif;
+  --text-font: Roboto, sans-serif;
+
+  /* transition */
+  --duration: 250ms;
+  --timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 h1,
 h2,
@@ -135,9 +143,21 @@ header {
   font-weight: 500;
   text-decoration: none;
 }
+
+.menu-link-web:after {
+  position: absolute;
+
+  width: 48px;
+  height: 4px;
+  background-color: #404bbf;
+  border-radius: 2px;
+  margin-top: 24px;
+  display: block;
+  content: "";
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
 .menu-link-portfolio:after {
   position: absolute;
-  bottom: 0px;
 
   width: 66px;
   height: 4px;
@@ -161,9 +181,11 @@ address {
   margin-left: auto;
 }
 .contacts {
+  font-family: "Roboto", sans-serif;
   display: flex;
   align-items: center;
   column-gap: 40px;
+  font-style: normal;
 }
 .contact-link {
   color: #434455;
@@ -389,21 +411,27 @@ header {
   align-items: center;
   width: 168px;
   height: 88px;
+}
+
+.customerss-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 168px;
+  height: 88px;
 
   border: 1px solid #8e8f99;
   border-radius: 4px;
-}
 
-.customers-item:hover,
-.customers-item:focus {
-  border: 1px solid #404bbf;
-  background-color: white;
+  transition: border var(--duration) var(--timing-function);
 }
-
-.brend:hover,
-.brend:focus {
-  color: #4d5ae5;
-  flex-direction: column;
+.customerss-link:hover,
+.customerss-link:focus {
+  border: 1px solid var(--focus-hover-color);
+}
+.customerss-link:hover .brend,
+.customerss-link:focus .brend {
+  fill: var(--focus-hover-color);
 }
 
 .customers-list {
@@ -416,6 +444,7 @@ header {
 .brend {
   fill: currentColor;
   color: #8e8f99;
+  transition: fill var(--duration) var(--timing-function);
 }
 
 /* =================================== FOOTER ===================================*/
@@ -433,6 +462,16 @@ header {
 
 .social-footer {
   margin-left: 120px;
+}
+.socials-pack {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+
+  transition: background-color var(--duration) var(--timing-function);
 }
 
 .title-social-media {
@@ -453,6 +492,7 @@ header {
   background: rgba(255, 255, 255, 0.1);
   width: 40px;
   height: 40px;
+
   display: flex;
   justify-content: center;
   align-items: center;
@@ -468,7 +508,8 @@ header {
   justify-content: center;
   align-items: center;
 }
-.socials-item:hover {
+.socials-pack:hover,
+.socials-pack:focus {
   background-color: #31d0aa;
   border-radius: 50%;
 }
@@ -551,22 +592,30 @@ header {
   flex-wrap: wrap;
   justify-content: center;
   column-gap: 24px;
-
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
   margin-bottom: 72px;
 }
 .btn-filter {
   padding: 12px 24px;
-
+  background: var(--background-light-color);
   border: 1px solid #e7e9fc;
-
   display: flex;
-  text-decoration: none;
+  align-items: center;
+  text-align: center;
+  color: var(--btn-background-color);
+
+  transition: background-color var(--duration) var(--timing-function),
+    color var(--duration) var(--timing-function),
+    border var(--duration) var(--timing-function),
+    box-shadow var(--duration) var(--timing-function);
 }
 .btn-filter:hover,
 .btn-filter:focus {
-  background: var(--focus-hover-color);
-  color: #e7e9fc;
+  background-color: var(--focus-hover-color);
+  color: var(--main-white);
   border: 1px solid var(--focus-hover-color);
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 2px 1px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
 /* =============card---------- */
@@ -637,9 +686,8 @@ header {
   background-color: rgba(46, 47, 66, 0.4);
 
   transform: scale(1);
-  transition: opacity var(--duration) var(--timing-function),
-    visibility var(--duration) var(--timing-function),
-    transform var(--duration) var(--timing-function);
+  transition: opacity 1300ms cubic-bezier(0.4, 0, 0.2, 1),
+    visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .backdrop.is-hidden {
@@ -661,6 +709,7 @@ header {
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
 }
+
 .modal-close-btn {
   position: absolute;
   top: 24px;
@@ -679,8 +728,7 @@ header {
 
   cursor: pointer;
 
-  transition: background-color var(--duration) var(--timing-function),
-    fill var(--duration) var(--timing-function);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .modal-close-btn:hover,
 .modal-close-btn:focus {
